@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annai Vision | Cable TV & Internet Service Provider Chennai</title>
+    <style>
+        :root {
+            --blue: #02529c; --accent: #0073e6; --sky: #e6f0fa; --dark: #1e293b; --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f8fafc; color: var(--dark); line-height: 1.6; }
+        
+        header { background: var(--white); position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 4px 12px rgba(2,82,156,0.08); border-bottom: 3px solid var(--blue); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
+        .brand-name { font-size: 1.8rem; font-weight: 800; color: var(--blue); text-transform: uppercase; }
+        .brand-subtext { font-size: 0.85rem; font-weight: 600; color: #64748b; margin-top: -2px; }
+        .nav-link-btn { background: var(--blue); color: var(--white); padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 600; cursor: pointer; border: none; }
+        .nav-link-btn:hover { background: var(--accent); }
+
+        .page-view { padding-top: 90px; }
+        #main-view { display: block; }
+        #contact-view { display: none; align-items: center; justify-content: center; text-align: center; padding: 120px 5%; min-height: 80vh; }
+        
+        .contact-box { background: var(--white); padding: 3rem 2rem; border-radius: 16px; box-shadow: 0 15px 35px rgba(2,82,156,0.1); max-width: 500px; width: 100%; border-top: 5px solid var(--blue); }
+        .phone-link { display: inline-block; font-size: 2.2rem; font-weight: 800; color: var(--accent); text-decoration: none; margin: 1.5rem 0; }
+        .back-btn { background: #64748b; color: var(--white); border: none; padding: 0.7rem 1.8rem; font-weight: 600; border-radius: 6px; cursor: pointer; }
+
+        .showcase-hero { background: linear-gradient(135deg, #ffffff 0%, var(--sky) 100%); padding: 6rem 5% 4rem 5%; text-align: center; }
+        .hero-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
+        .hero-title span { color: var(--blue); }
+        
+        .logo-row-container { max-width: 1100px; margin: 2.5rem auto 0 auto; background: var(--white); padding: 2rem; border-radius: 16px; }
+        .logo-flex-grid { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin-top: 1rem; }
+        .logo-box-css { padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 800; min-width: 180px; text-align: center; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+        .hardware-split-section { max-width: 1200px; margin: 4rem auto; padding: 0 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+        .hardware-card { background: var(--white); border-radius: 16px; overflow: hidden; border: 1px solid #edf2f7; text-align: center; }
+        
+        .css-graphic-frame { width: 100%; height: 220px; background: #0f172a; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--white); position: relative; }
+        .graphic-icon { font-size: 3.5rem; margin-bottom: 0.5rem; filter: drop-shadow(0 5px 15px rgba(0,115,230,0.4)); }
+        .graphic-label { font-size: 0.85rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 1px; }
+
+        .hardware-body { padding: 1.8rem; }
+        .hardware-tag { display: inline-block; font-size: 0.75rem; font-weight: 700; background: var(--sky); color: var(--blue); padding: 0.3rem 1rem; border-radius: 50px; margin-bottom: 0.8rem; }
+
+        .operator-banner { background: var(--blue); color: var(--white); padding: 5rem 5%; text-align: center; }
+        .operator-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 2rem; }
+        .operator-title span { color: #38bdf8; }
+        .stb-display-container { background: rgba(255,255,255,0.1); padding: 2.5rem; border-radius: 16px; max-width: 450px; margin: 0 auto; border: 1px solid rgba(255,255,255,0.2); }
+        .css-stb-icon { font-size: 4rem; margin-bottom: 0.5rem; display: block; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3)); }
+
+        footer { background: var(--dark); color: #94a3b8; padding: 3rem 5%; text-align: center; border-top: 4px solid var(--accent); }
+        .credit-text { font-size: 1.2rem; font-weight: 700; color: var(--white); }
+        .credit-text span { color: #38bdf8; }
+        .footer-phone { color: var(--white); text-decoration: none; font-weight: 600; transition: color 0.3s; }
+        .footer-phone:hover { color: var(--accent); }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 1rem; text-align: center; }
+            .hardware-split-section { grid-template-columns: 1fr; }
+            .hero-title { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            
+                <div class="brand-name">Annai Vision</div>
+                <div class="brand-subtext">Cable and Internet Service Providers</div>
+            </div>
+            <button class="nav-link-btn" onclick="showContactPage()">Contact Us</button>
+        </div>
+    </header>
+
+    <div id="main-view" class="page-view">
+        <section class="showcase-hero">
+            <h1 class="hero-title">Welcome to <span>Annai Vision</span> Digital Hub</h1>
+            <p style="color: #475569; margin-bottom: 2rem; font-size: 1.1rem;">Premium digital transmission and fiber optic internet networking solutions in Durga Nagar.</p>
+
+            <div class="logo-row-container">
+                <div style="font-size: 0.8rem; font-weight: 700; color: #94a3b8; letter-spacing: 1px; text-transform: uppercase;">Digital Partners</div>
+                <div class="logo-flex-grid">
+                    <div class="logo-box-css" style="background: #ffedd5; color: #ea580c; border: 2px solid #f97316;">TCCL Digital</div>
+                    <div class="logo-box-css" style="background: #e0f2fe; color: #0369a1; border: 2px solid #38bdf8;">TIC Fiber</div>
+                    <div class="logo-box-css" style="background: #dcfce7; color: #15803d; border: 2px solid #4ade80;">TCOA Tamilnadu</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hardware-split-section">
+            <div class="hardware-card">
+                <div class="css-graphic-frame">
+                    <div class="graphic-icon">📺</div>
+                    <div class="graphic-label">TCCL BROADCAST HUB</div>
+                </div>
+                <div class="hardware-body">
+                    <span class="hardware-tag">Broadcast Network</span>
+                    <h3 style="font-size: 1.3rem;">TCCL Cable TV Operator Hub</h3>
+                </div>
+            </div>
+
+            <div class="hardware-card">
+                <div class="css-graphic-frame" style="background: #1e1b4b;">
+                    <div class="graphic-icon">🌐</div>
+                    <div class="graphic-label">MERCUSYS FIBER WIFI</div>
+                </div>
+                <div class="hardware-body">
+                    <span class="hardware-tag">High Speed Internet</span>
+                    <h3 style="font-size: 1.3rem;">Mercusys & TP-Link Fiber WiFi Router</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="operator-banner">
+            <div class="operator-wrapper">
+                <h2 class="operator-title">Annai Vision is Available in <span>Durga Nagar</span><br>by Operator <span>Raguraman</span></h2>
+                <div class="stb-display-container">
+                    <span class="css-stb-icon">📼</span>
+                    <div class="stb-caption">TCCL Digital HD Setup Box Connection Receiver</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="contact-view" class="page-view">
+        <div class="contact-box">
+            <h2>Get Connected</h2>
+            <p style="color: #64748b; font-weight: 500; margin-top: 0.5rem;">Click below to call our booking office desk:</p>
+            <a href="tel:9840796718" class="phone-link">9840796718</a>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 1.5rem;">Durga Nagar, Chennai, Tamilnadu</p>
+            <button class="back-btn" onclick="showMainPage()">← Return to Main Page</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="credit-text">Website Done by <span>Raghven</span></div>
+            <p style="margin: 0.5rem 0 1rem 0; font-weight: 500;">Support Hotline: <a href="tel:8056186066" class="footer-phone">8056186066</a></p>
+            <p style="font-size: 0.85rem;">© 2026 Annai Vision Operators. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showContactPage() {
+            document.getElementById('main-view').style.display = 'none';
+            document.getElementById('contact-view').style.display = 'flex';
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        function showMainPage() {
+            document.getElementById('contact-view').style.display = 'none';
+            document.getElementById('main-view').style.display = 'block';
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
